@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy Movies</title>
+        <link rel="stylesheet" href="styles.css">
+        <title>Movie App</title>
+      </head>
+      <body>
+        <img src= "https://beverly.org/wp-content/uploads/2017/02/groovy-movies.jpg" class= "img"> 
+
+          <header>
+              <form  id="form">
+                  <input type="text" placeholder="Search" id="search" class="search">
+              </form>
+          </header>
+
+
+          <h1>Welcome to Groovy Movies</h1>
+          <h2>Great movies recommended!</h2>
+<p class= paragraph>Looking for a movie recommendation? Groovy Movies, can help you! Pick a genre below, and watch the groovy magic happen!</p>
+          <div id="tags"></div>
+          <div id="myNav" class="overlay">
+      
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            
+              <div class="overlay-content" id="overlay-content"></div>
+              
+              <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
+              
+              <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+      
+            </div>
+          <main id="main"></main>
+          <div class="pagination">
+              <div class="page" id="prev">Previous Page</div>
+              <div class="current" id="current">1</div>
+              <div class="page" id="next">Next Page</div>
+      
+          </div>
+      
+          <script src="Main.js"></script>
+      </body>
+      </html>
