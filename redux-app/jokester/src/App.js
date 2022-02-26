@@ -1,7 +1,11 @@
+import { useSelector } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const username = useSelector(state => state.username);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +21,9 @@ function App() {
         >
           Learn React
         </a>
+        <p>{username}</p>
       </header>
+      
     </div>
   );
 }
