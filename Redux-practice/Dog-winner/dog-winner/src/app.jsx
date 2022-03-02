@@ -1,12 +1,13 @@
+import {Footer, Header, Main} from './sectioning';
 
  const App = () => {
-
-
   return (
-    <div>
-      Hello World
-
-    </div>
+    <>
+    <Header />
+    <Main />
+    <Footer />
+    </>
+    
   );
 }
 
