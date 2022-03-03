@@ -1,4 +1,4 @@
-import Landing from "../views/landing";
+import Landing from "../views/landing.jsx";
 
 
 const Main = () => {
