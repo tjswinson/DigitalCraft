@@ -12,7 +12,7 @@ const Landing = () => {
     const navigateTo = useNavigate();
     const [isGameEnd, setIsGameEnd] = useState(false);
     const [currentQuestionCount, setCurrentQuestionCount] = useStateCallback(0);
-
+    const [isGameEnd, setIsGameEnd] = useState(false);
 
     useEffect(() => {
         dispatch(setInitialState());
@@ -27,6 +27,13 @@ const Landing = () => {
         }
       }
 
+      const handleNewGame = () => {
+        disptach(setInitialState());
+        setIsGameEnd(false);
+        setCurrentQuestionCount(1);
+        navigateTo('/q1');
+      };
+
     const handleClick = num => {
         setCurrentQuestionCount(prevState => prevState + 1, newState => handleNavigation(newState));
       };
@@ -40,9 +47,14 @@ const Landing = () => {
         <Route path={`q${currentQuestionCount}`} element={<Question data=
         {questions[currentQuestionCount - 1]} />} />
       </Routes>
-      <button disabled={isGameEnd} onClick={handleClick}>Proceed</button>
-      {isGameEnd && <p>Game Over</p>}
-      </>
+      {!isGameEnd && <button disabled={isGameEnd} onClick={handleClick}>Proceed</button>}
+      {isGameEnd && (
+        <>
+          <p>Game Over</p>
+          <button onClick={handleNewGame}>New Game</button>
+        </>
+      )}
+    </>
     )
 
 };
